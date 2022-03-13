@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Main\HomeController;
+use App\Http\Controllers\Main\LoadCatalogController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::post('/load-catalog', [LoadCatalogController::class, 'store'])->name('main.load.catalog');
